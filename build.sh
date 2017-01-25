@@ -10,7 +10,7 @@ function copy() {
 }
 
 function help() {
-	echo "Usage: build.sh [copy|clean|package|run]"	
+	echo "Usage: build.sh [copy|clean|package|run]"
 }
 
 function clean() {
@@ -26,7 +26,7 @@ function package() {
 
 
 function run() {
-	package && java -Xdebug -Xrunjdwp:transport=dt_socket,address=5000,server=y,suspend=n -jar target/cas-management.war 
+	package && java -Xdebug -Xrunjdwp:transport=dt_socket,address=5001,server=y,suspend=n -jar target/cas-management.war
 }
 
 if [ $# -eq 0 ]; then
@@ -38,12 +38,12 @@ fi
 
 case "$1" in
 "copy")
-    copy 
+    copy
     ;;
 "clean")
 	shift
     clean "$@"
-    ;;   
+    ;;
 "package")
 	shift
     package "$@"
@@ -55,4 +55,3 @@ case "$1" in
     help
     ;;
 esac
-

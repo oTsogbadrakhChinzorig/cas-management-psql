@@ -44,7 +44,7 @@ you will need to eveluate the "build.sh" build script and make sure the configur
 ```bash
 # build.sh
 ...
- package && java -Xdebug -Xrunjdwp:transport=dt_socket,address=5000,
+ package && java -Xdebug -Xrunjdwp:transport=dt_socket,address=5XXX,
 ...
 ```
 

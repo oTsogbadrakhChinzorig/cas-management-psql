@@ -39,10 +39,14 @@ To update `SNAPSHOT` versions run:
 ## Note
 
 If you are running the management web application on the same machine as the CAS server web application itself, 
-you will need to eveluate the build script and make sure the configuration files don't override each other.
+you will need to eveluate the "build.sh" build script and make sure the configuration files don't override each other.
 
-## Fix the script
-Same machine gives you error so we need fix script. Where is that script ??????
+```bash
+# build.sh
+...
+ package && java -Xdebug -Xrunjdwp:transport=dt_socket,address=5000,
+...
+```
 
 # Deployment
 
